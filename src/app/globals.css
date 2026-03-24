@@ -3,26 +3,42 @@
 @layer base {
   :root {
     /* COLORS */
-    --golden-orange: hsl(35, 85%, 75%);
-    --deep-golden-orange: hsl(35, 85%, 55%);
-    --deep-golden-orange_30: hsla(35, 85%, 55%, 0.3);
-    --bright-amber: hsl(40, 90%, 60%);
-    --warm-orange-brown: hsl(25, 80%, 35%);
-    --deep-orange-brown: hsl(20, 75%, 30%); 
-    --darkest-orange-brown: hsl(15, 70%, 25%);
-    --warm-peach-beige_50: hsla(40, 30%, 90%, 0.5); 
-    --golden-cream: hsl(45, 50%, 96%);
-    --warm-orange-taupe: hsl(30, 20%, 47%);
-    --light-peach-beige: hsl(35, 30%, 88%);
-    --warm-golden-white: hsl(45, 40%, 98%); 
+    --soft-sage: hsl(45, 60%, 82%);
+    /* pale gold tint */
+    --vibrant-lime: hsl(43, 74%, 58%);
+    /* bright gold — primary brand accent */
+    --vibrant-lime_30: hsla(43, 74%, 58%, 0.3);
+    /* gold overlay / glassmorphism */
+    --forest-green: hsl(40, 65%, 38%);
+    /* deep amber gold */
+    --deep-moss: hsl(38, 55%, 24%);
+    /* dark bronze */
+    --darkest-forest: hsl(35, 40%, 14%);
+    /* near-black bronze */
+    --rich-charcoal-green: hsl(30, 15%, 10%);
+    /* rich black base — logo background */
+    --soft-mint_50: hsla(45, 40%, 90%, 0.5);
+    /* warm ivory overlay */
+    --pale-sage: hsl(44, 50%, 95%);
+    /* soft champagne surface */
+    --stone-gray: hsl(40, 10%, 45%);
+    /* warm neutral gray */
+    --light-cream: hsl(43, 45%, 90%);
+    /* warm cream */
+    --crisp-ivory: hsl(46, 50%, 97%);
+    /* warm white ivory */
     --black_10: hsla(0, 0%, 0%, 0.1);
+    /* unchanged */
     --black_8: hsla(0, 0%, 0%, 0.08);
+    /* unchanged */
     --white: hsl(0, 0%, 100%);
+    /* unchanged */
     --black: hsl(0, 0%, 0%);
-    --warm-jet: hsl(20, 15%, 20%);
+    /* unchanged */
+    --warm-slate: hsl(38, 18%, 18%);
 
     /* GRADIENT COLOR */
-    --gradient: linear-gradient( 90deg, var(--bright-amber) 0%, var(--deep-golden-orange) 100%);
+    --gradient: linear-gradient(90deg, var(--forest-green) 0%, var(--vibrant-lime) 100%);
 
     /* TYPOGRAPHY */
 
@@ -60,7 +76,7 @@
     --shadow-1: 4px 4px 15px var(--black_10);
     --shadow-2: 0 10px 15px var(--black_10);
     --shadow-3: 0px 20px 60px var(--black_8);
-    --shadow-4: 0px 10px 30px var(--deep-golden-orange_30);
+    --shadow-4: 0px 10px 30px var(--vibrant-lime_30);
     --shadow-5: 0px 2px 60px 0px var(--black_10);
 
     /* BORDER RADIUS*/
@@ -81,25 +97,30 @@
     padding: 0;
     box-sizing: border-box;
   }
-  li { 
-    list-style: none; 
+
+  li {
+    list-style: none;
   }
+
   a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
   }
+
   a,
   img,
   span,
   input,
   button,
   select,
-  ion-icon { 
-    display: block; 
+  ion-icon {
+    display: block;
   }
-  img { 
-    height: auto; 
+
+  img {
+    height: auto;
   }
+
   input,
   select,
   button {
@@ -107,56 +128,68 @@
     border: none;
     font: inherit;
   }
+
   input,
-  select { 
-    width: 100%; 
+  select {
+    width: 100%;
   }
+
   select {
     outline: none;
   }
-  button { 
-    cursor: pointer; 
+
+  button {
+    cursor: pointer;
   }
-  ion-icon { 
-    pointer-events: none; 
+
+  ion-icon {
+    pointer-events: none;
   }
-  address { 
-    font-style: normal; 
+
+  address {
+    font-style: normal;
   }
+
   html {
     font-family: var(--fontFamily-roboto);
     font-size: 10px;
     scroll-behavior: smooth;
   }
+
   body {
     background-color: var(--white);
-    color: var(--warm-orange-taupe);
+    color: var(--stone-gray);
     font-size: 1.5rem;
   }
+
   input:-webkit-autofill,
   textarea:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px var(--deep-orange-brown) inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--darkest-forest) inset !important;
     -webkit-text-fill-color: var(--white) !important;
     transition: background-color 5000s ease-in-out 0s;
-    border: 1px solid var(--warm-jet) !important;
+    border: 1px solid var(--warm-slate) !important;
   }
+
   input:-moz-autofill,
   textarea:-moz-autofill {
-    background-color: var(--deep-orange-brown);
+    background-color: var(--darkest-forest);
     color: var(--white);
-    border: 1px solid var(--bright-amber) !important;
+    border: 1px solid var(--forest-green) !important;
   }
+
   input:-webkit-autofill:focus,
   textarea:-webkit-autofill:focus {
-    border: 1px solid var(--bright-amber) !important;
+    border: 1px solid var(--forest-green) !important;
     outline: none !important;
   }
+
   input:-moz-autofill:focus,
   textarea:-moz-autofill:focus,
   select:-moz-autofill:focus {
-    border: 1px solid var(--bright-amber) !important;
+    border: 1px solid var(--forest-green) !important;
     outline: none !important;
   }
+
   input:-webkit-autofill::placeholder,
   textarea:-webkit-autofill::placeholder {
     color: var(--white) !important;
@@ -165,37 +198,43 @@
 }
 
 @layer components {
+
   /* TYPOGRAPHY */
   .headline-1 {
     color: var(--white);
     font-family: var(--fontFamily-roboto);
     font-weight: var(--weight-regular);
     line-height: var(--lineHeight-2);
-    font-size: var(--fontSize-headline-1); 
+    font-size: var(--fontSize-headline-1);
   }
+
   .body-1 {
     font-size: var(--fontSize-body-1);
-    line-height: var(--lineHeight-6); 
+    line-height: var(--lineHeight-6);
   }
-  .body-4 { 
+
+  .body-4 {
     font-size: var(--fontSize-body-4);
   }
 
   /* REUSABLE STYLES */
-  .custom-container { 
-    padding-inline: 25px; 
+  .custom-container {
+    padding-inline: 25px;
   }
-  .section { 
-    padding-block: var(--section-padding); 
+
+  .section {
+    padding-block: var(--section-padding);
   }
+
   .section-subtitle {
-    color: var(--deep-golden-orange);
+    color: var(--vibrant-lime);
     font-family: var(--fontFamily-poppins);
     font-size: var(--fontSize-6);
     font-weight: var(--weight-700);
     text-transform: uppercase;
     margin-block-end: 10px;
   }
+
   .h1,
   .h2,
   .h3,
@@ -203,26 +242,33 @@
     font-family: var(--fontFamily-poppins);
     line-height: 1.2;
   }
+
   .h1 {
-    color: var(--warm-orange-brown);
+    color: var(--deep-moss);
     font-size: var(--fontSize-2);
   }
+
   .h2,
-  .h3 { 
-    color: var(--deep-orange-brown); 
+  .h3 {
+    color: var(--darkest-forest);
   }
-  .h2 { 
-    font-size: var(--fontSize-1); 
+
+  .h2 {
+    font-size: var(--fontSize-1);
   }
+
   .h25 {
-    color: var(--warm-orange-brown);
+    color: var(--deep-moss);
     font-size: 2.6rem;
   }
-  .h3 { 
-    font-size: var(--fontSize-5); 
+
+  .h3 {
+    font-size: var(--fontSize-5);
   }
+
   .btn {
-    background-image: linear-gradient( var(--deg, 90deg), var(--bright-amber) 0%, var(--deep-golden-orange) 100%);  /* var(--deg, 90deg) → “Use the value of the custom property --deg if it’s defined; otherwise, use 90deg as the fallback.” */ 
+    background-image: linear-gradient(var(--deg, 90deg), var(--forest-green) 0%, var(--vibrant-lime) 100%);
+    /* var(--deg, 90deg) → “Use the value of the custom property --deg if it’s defined; otherwise, use 90deg as the fallback.” */
     color: var(--white);
     font-size: var(--fontSize-7);
     text-transform: uppercase;
@@ -231,58 +277,72 @@
     border-radius: var(--radius-4);
     box-shadow: var(--shadow-4);
   }
-  .btn:is(:hover, :focus) { 
-    --deg: -90deg; 
+
+  .btn:is(:hover, :focus) {
+    --deg: -90deg;
   }
-  .w-fill { 
-    width: 100%; 
+
+  .w-fill {
+    width: 100%;
   }
-  .text-center { 
-    text-align: center; 
+
+  .text-center {
+    text-align: center;
   }
+
   .card-text,
-  .section-text { 
-    line-height: 1.7; 
+  .section-text {
+    line-height: 1.7;
   }
+
   .img-holder {
     aspect-ratio: var(--width) / var(--height);
-    background-color: var(--light-peach-beige);
+    background-color: var(--light-cream);
   }
+
   .img-cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .bg-blue-10 { 
-    background-color: var(--darkest-orange-brown); 
+
+  .bg-blue-10 {
+    background-color: var(--rich-charcoal-green);
   }
+
   .input-field {
-    background-color: var(--deep-orange-brown);
+    background-color: var(--darkest-forest);
     color: var(--white);
     height: 56px;
     padding: 10px 20px;
-    border: 1px solid var(--warm-jet);
+    border: 1px solid var(--warm-slate);
     margin-block-end: 20px;
     outline: none;
     transition: border-color var(--transition-2);
   }
-  .input-field::placeholder { 
-    color: inherit; 
+
+  .input-field::placeholder {
+    color: inherit;
   }
-  .input-field:focus { 
-    border-color: var(--bright-amber); 
+
+  .input-field:focus {
+    border-color: var(--forest-green);
   }
+
   .icon-wrapper {
     position: relative;
     margin-block-end: 20px;
   }
+
   .icon-wrapper .input-field {
     margin-block-end: 0;
     padding-inline-start: 40px;
     padding-inline-end: 40px;
-    appearance: none;  /* The appearance CSS property controls how form elements are styled by the browser's default styling. "appearance: none" removes the browser's default styling from form elements*/
+    appearance: none;
+    /* The appearance CSS property controls how form elements are styled by the browser's default styling. "appearance: none" removes the browser's default styling from form elements*/
     cursor: pointer;
   }
+
   .icon-wrapper ion-icon {
     position: absolute;
     top: 50%;
@@ -291,24 +351,30 @@
     --ionicon-stroke-width: 50px;
     pointer-events: none;
   }
-  .icon-wrapper ion-icon:first-child { 
-    left: 15px; 
+
+  .icon-wrapper ion-icon:first-child {
+    left: 15px;
   }
-  .icon-wrapper ion-icon:last-child { 
-    right: 10px; 
+
+  .icon-wrapper ion-icon:last-child {
+    right: 10px;
   }
+
   .contact-number {
-    color: var(--bright-amber);
+    color: var(--forest-green);
     max-width: max-content;
     margin-inline: auto;
   }
-  .contact-number::after { 
-    bottom: -5px; 
+
+  .contact-number::after {
+    bottom: -5px;
   }
+
   .hover-underline {
     position: relative;
     max-width: max-content;
   }
+
   .hover-underline::after {
     content: "";
     position: absolute;
@@ -316,33 +382,38 @@
     bottom: 0;
     width: 100%;
     height: 5px;
-    border-block: 1px solid var(--bright-amber);
+    border-block: 1px solid var(--forest-green);
     transform: scaleX(0.2);
     opacity: 0;
     transition: var(--transition-2);
   }
+
   .hover-underline:is(:hover, :focus-visible)::after {
     transform: scaleX(1);
     opacity: 1;
   }
+
   .separator {
     width: 8px;
     height: 8px;
-    border: 1px solid var(--bright-amber);
+    border: 1px solid var(--forest-green);
     transform: rotate(45deg);
   }
-  .contact-label { 
-    font-weight: var(--weight-700); 
+
+  .contact-label {
+    font-weight: var(--weight-700);
   }
-  
+
   /* APPOINTMENT */
   .input-field[type="date"] {
     text-transform: uppercase;
     padding-inline-end: 10px;
   }
-  .input-field[type="date"]::-webkit-calendar-picker-indicator { 
-    opacity: 0; 
+
+  .input-field[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
   }
+
   textarea.input-field {
     resize: none;
     height: 140px;
@@ -360,12 +431,14 @@
     text-decoration: none;
     color: inherit;
   }
+
   .footer-link ion-icon {
-    color: var(--deep-golden-orange);
+    color: var(--vibrant-lime);
     --ionicon-stroke-width: 50px;
   }
-  .footer-link:is(:hover, :focus) { 
-    color: var(--white); 
+
+  .footer-link:is(:hover, :focus) {
+    color: var(--white);
   }
 }
 
@@ -382,8 +455,9 @@
     width: 100%;
     margin-inline: auto;
   }
-  .contact-number { 
-    --fontSize-body-1: 3rem; 
+
+  .contact-number {
+    --fontSize-body-1: 3rem;
   }
 }
 
@@ -394,16 +468,17 @@
   }
 
   /* RESET */
-  body { 
-    font-size: 1.6rem; 
+  body {
+    font-size: 1.6rem;
   }
 
   /* REUSABLE STYLES */
-  .custom-container { 
-    max-width: 750px; 
+  .custom-container {
+    max-width: 750px;
   }
-  .section-subtitle { 
-    --fontSize-6: 2.2rem; 
+
+  .section-subtitle {
+    --fontSize-6: 2.2rem;
   }
 }
 
@@ -416,8 +491,8 @@
   }
 
   /* REUSABLE STYLES */
-  .custom-container { 
-    max-width: 980px; 
+  .custom-container {
+    max-width: 980px;
   }
 }
 
@@ -430,7 +505,7 @@
   }
 
   /* REUSABLE STYLES */
-  .custom-container { 
-    max-width: 1180px; 
+  .custom-container {
+    max-width: 1180px;
   }
 }

@@ -12,7 +12,7 @@ export const CallToAction = memo(() => (
 
             <figure className={`${styles.ctaBanner} relative h-166 overflow-hidden bg-light-warm-beige flex items-center justify-center`}>
                 <Image
-                    src="/images/cta-banner.webp"
+                    src="/images/cta-banner.png"
                     width={800}
                     height={400}
                     loading="lazy"
@@ -23,7 +23,7 @@ export const CallToAction = memo(() => (
             </figure>
 
             <div className={styles.ctaContent}>
-                <p className={`section-subtitle ${styles.sectionSubtitle}`}>Book Dental Appointment</p>
+                <p className={`section-subtitle ${styles.sectionSubtitle}`}>Book Appointment</p>
                 <h2 className={`h2 section-title ${styles.sectionTitle}`}>We Are open And Welcoming Patients</h2>
 
                 <div className={styles.ctaBtnContainer}>

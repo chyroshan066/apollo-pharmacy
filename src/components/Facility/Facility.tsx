@@ -17,43 +17,61 @@ interface Stats {
 
 const FACILITIES: Facility[] = [
     {
-        icon: "medical-outline",
-        title: "Dental X-Ray",
-        description: "State-of-the-art digital X-ray technology for precise diagnosis and treatment planning with minimal radiation exposure."
-    },
-    {
-        icon: "flask-outline",
-        title: "Dental Lab",
-        description: "In-house dental laboratory ensuring quick turnaround for crowns, bridges, dentures and other prosthetic work."
-    },
-    {
         icon: "storefront-outline",
         title: "Pharmacy",
-        description: "On-site pharmacy stocked with essential dental medications and post-treatment care products for your convenience."
+        description: "On-site pharmacy stocked with all essential medications and post-treatment care products for your convenience."
     },
     {
-        icon: "analytics-outline",
-        title: "Pathology",
-        description: "Advanced pathological services for comprehensive oral health assessment and early detection of dental conditions."
-    }
+        icon: "scan-outline",
+        title: "Radiology & Imaging",
+        description: "Advanced digital X-ray, ultrasound, and imaging equipment for accurate and timely diagnostics."
+    },
+    {
+        icon: "bed-outline",
+        title: "ICU / NICU",
+        description: "Fully equipped intensive care units with round-the-clock monitoring for critically ill adults and newborns."
+    },
+    {
+        icon: "flash-outline",
+        title: "24hr Emergency",
+        description: "Always-open emergency department staffed with experienced doctors and life-saving equipment."
+    },
+    {
+        icon: "cut-outline",
+        title: "Operation Theatres",
+        description: "Modern minor and major operation theatres equipped for a wide range of surgical procedures."
+    },
+    {
+        icon: "fitness-outline",
+        title: "Dedicated Wards",
+        description: "Comfortable general and private wards designed for patient recovery with attentive nursing care."
+    },
 ];
 
 const STATS: Stats[] = [
-    {
-        title: "Digital X-Ray",
-        description: "90% Less Radiation",
-    },
-    {
-        title: "In-House Lab",
-        description: "Same Day Service",
-    },
     {
         title: "Full Pharmacy",
         description: "All Medications Available",
     },
     {
-        title: "Lab Reports",
-        description: "Quick & Accurate",
+        title: "24/7 Emergency",
+        description: "Always Open & Staffed",
+    },
+    {
+        title: "ICU / NICU",
+        description: "Critical Care Ready",
+    },
+    {
+        title: "Modern OTs",
+        description: "Minor & Major Surgeries",
+    },
+    {
+        title: "Digital Radiology",
+        description: "Fast & Accurate Imaging",
+    },
+    {
+        title: "17+ Specialties",
+        description: "All Under One Roof",
     },
 ];
 
@@ -73,7 +91,7 @@ export const Facility = memo(() => {
                         style={{
                             maxWidth: '600px',
                             margin: '20px auto 60px',
-                            color: 'var(--warm-orange-taupe)'
+                            color: 'var(--stone-gray)'
                         }}
                     >
                         We are equipped with cutting-edge technology and modern facilities to provide you with the highest standard of dental care in a comfortable environment.
@@ -96,7 +114,7 @@ export const Facility = memo(() => {
                                 boxShadow: 'var(--shadow-2)',
                                 textAlign: 'center',
                                 transition: 'var(--transition-2)',
-                                border: '1px solid var(--light-peach-beige)'
+                                border: '1px solid var(--light-cream)'
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-8px)';
@@ -131,14 +149,14 @@ export const Facility = memo(() => {
                                 className="h3"
                                 style={{
                                     marginBottom: '15px',
-                                    color: 'var(--deep-orange-brown)'
+                                    color: 'var(--darkest-forest)'
                                 }}
                             >
                                 {facility.title}
                             </h3>
 
                             <p style={{
-                                color: 'var(--warm-orange-taupe)',
+                                color: 'var(--stone-gray)',
                                 lineHeight: '1.6',
                                 fontSize: '1.5rem'
                             }}>
@@ -155,7 +173,7 @@ export const Facility = memo(() => {
                     gap: '30px',
                     marginTop: '80px',
                     padding: '50px 30px',
-                    background: 'linear-gradient(135deg, var(--golden-cream) 0%, var(--warm-peach-beige_50) 100%)',
+                    background: 'linear-gradient(135deg, var(--pale-sage) 0%, var(--soft-mint_50) 100%)',
                     borderRadius: 'var(--radius-6)',
                     textAlign: 'center'
                 }}>
@@ -165,13 +183,13 @@ export const Facility = memo(() => {
                             <h3
                                 className="h25"
                                 style={{
-                                    color: 'var(--deep-golden-orange)',
+                                    color: 'var(--vibrant-lime)',
                                     marginBottom: '10px'
                                 }}
                             >
                                 {stat.title}
                             </h3>
-                            <p style={{ color: 'var(--warm-orange-taupe)', fontSize: '1.4rem' }}>
+                            <p style={{ color: 'var(--stone-gray)', fontSize: '1.4rem' }}>
                                 {stat.description}
                             </p>
                         </div>

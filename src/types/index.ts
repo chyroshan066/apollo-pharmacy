@@ -1,3 +1,7 @@
+export interface ClassName {
+    className?: string;
+}
+
 interface Name {
     name: string;
 }

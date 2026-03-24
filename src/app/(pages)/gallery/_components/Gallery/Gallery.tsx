@@ -153,14 +153,14 @@ export default function Gallery({
 
           {/* Section Header */}
           <div className="text-center">
-            <p className="section-subtitle">Our Clinic</p>
+            <p className="section-subtitle">Our Pharmacy</p>
             <h2 className="h2 section-title">
-              Explore Our Dental
+              Explore Our Pharmacy
               <br />
               Gallery
             </h2>
             <p className="section-text">
-              Take a virtual tour of our modern dental facility, featuring state-of-the-art equipment, comfortable treatment rooms, and a welcoming environment designed with your comfort in mind.
+              Take a virtual tour of our modern pharmacy facilities, featuring well-organized medicine sections, comfortable consultation areas, and a welcoming environment designed with your health needs in mind.
             </p>
           </div>
 
@@ -442,13 +442,13 @@ export default function Gallery({
         .stat-number {
           font-size: var(--fontSize-4);
           font-weight: var(--weight-700);
-          color: var(--warm-orange-brown);
+          color: var(--deep-moss);
           line-height: 1;
         }
 
         .stat-label {
           font-size: var(--fontSize-7);
-          color: var(--warm-orange-taupe);
+          color: var(--stone-gray);
           margin-top: 5px;
         }
 
@@ -484,7 +484,7 @@ export default function Gallery({
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--deep-golden-orange);
+          color: var(--vibrant-lime);
           font-size: 18px;
           backdrop-filter: blur(10px);
           opacity: 0;
@@ -522,18 +522,18 @@ export default function Gallery({
         .gallery-empty {
           text-align: center;
           padding: 80px 20px;
-          color: var(--warm-orange-taupe);
+          color: var(--stone-gray);
         }
 
         .empty-icon {
           font-size: 64px;
-          color: var(--light-peach-beige);
+          color: var(--light-cream);
           margin-bottom: 20px;
         }
 
         .empty-title {
           font-size: var(--fontSize-4);
-          color: var(--warm-orange-brown);
+          color: var(--deep-moss);
           margin-bottom: 15px;
         }
 
@@ -679,7 +679,7 @@ export default function Gallery({
           appearance: none;
           width: 14px;
           height: 14px;
-          background: var(--deep-golden-orange);
+          background: var(--vibrant-lime);
           border-radius: 50%;
           cursor: pointer;
         }
@@ -687,7 +687,7 @@ export default function Gallery({
         .volume-slider::-moz-range-thumb {
           width: 14px;
           height: 14px;
-          background: var(--deep-golden-orange);
+          background: var(--vibrant-lime);
           border-radius: 50%;
           cursor: pointer;
           border: none;
@@ -710,13 +710,13 @@ export default function Gallery({
 
         .lightbox-title {
           font-size: var(--fontSize-5);
-          color: var(--warm-orange-brown);
+          color: var(--deep-moss);
           margin: 0;
           font-weight: var(--weight-600);
         }
 
         .lightbox-description {
-          color: var(--warm-orange-taupe);
+          color: var(--stone-gray);
           line-height: 1.6;
           margin: 0;
           font-size: 14px;
@@ -742,9 +742,9 @@ export default function Gallery({
         }
 
         .image-counter {
-          color: var(--deep-golden-orange);
+          color: var(--vibrant-lime);
           font-weight: var(--weight-600);
-          background: rgba(var(--deep-golden-orange-rgb, 88, 56, 255), 0.1);
+          background: rgba(var(--vibrant-lime-rgb, 88, 56, 255), 0.1);
           padding: 8px 16px;
           border-radius: 20px;
           font-size: 13px;
@@ -931,7 +931,7 @@ export default function Gallery({
         .video-control-btn:focus,
         .lightbox-close:focus,
         .lightbox-nav:focus {
-          outline: 2px solid var(--deep-golden-orange);
+          outline: 2px solid var(--vibrant-lime);
           outline-offset: 2px;
         }
 

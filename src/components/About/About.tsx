@@ -10,7 +10,7 @@ export const About = memo(() => (
     >
         <div className={`custom-container ${styles.customContainer}`}>
 
-            <figure className={styles.aboutBanner}>
+            {/* <figure className={styles.aboutBanner}>
                 <Image
                     src="/images/about-banner.webp"
                     width={470}
@@ -19,22 +19,22 @@ export const About = memo(() => (
                     alt="about banner"
                     className="w-fill"
                 />
-            </figure>
+            </figure> */}
 
             <div>
                 <p className="section-subtitle">About Us</p>
-                <h2 className="h2 section-title">We Care For Your Dental Health</h2>
+                <h2 className="h2 section-title">We Care For Your Health & Wellness</h2>
                 <p className={`section-text ${styles.sectionText1}`}>
-                    Welcome to <b>Pradhan Dental Clinic</b>, your trusted <b>best dental clinic in Birtamode</b> located at Aduwa Khola, Birtamode, Jhapa, Nepal. As the premier choice for <b>dental in Birtamode</b> , we operate with the motto <i>“Professional Dentist, Advanced Technology and Affordable Price”</i>, committed to providing high-quality <b>dental care in Nepal</b> for every smile.
+                    Welcome to <b>Apollo Pharmacy,</b> your trusted best <b>pharmacy in Surunga</b> and <b>best pharmacy in Damak,</b> with convenient locations serving the communities of Jhapa, Nepal. As the premier choice for <b>pharmacy in Surunga</b> and <b>pharmacy in Damak,</b> we operate with the motto <b>"Quality Medicines, Expert Guidance and Affordable Prices",</b> committed to providing high-quality pharmaceutical care in Nepal for every family.
                 </p>
                 <p className="section-text">
-                    Our team of experienced dentists at this leading <b>dental clinic in Birtamode</b> offers a full range of treatments including <b>dental implants, braces, cosmetic dentistry, root canal, teeth whitening, orthodontics, gum treatment, oral surgery,</b> and <b>tooth extraction.</b> We also specialize in <b>pediatric dentistry,</b> ensuring gentle care for children, as well as <b>family dentist services in Birtamode</b> for all ages.
+                    Our team of <b>experienced pharmacists</b> at these leading pharmacy branches offers a comprehensive range of services including <b>prescription dispensing, over-the-counter medications, health supplements, vitamins, ayurvedic medicines, baby care products, diabetic care,</b> and <b>health monitoring services.</b> We also specialize in <b>personalized medication counseling,</b> ensuring proper guidance for all age groups, as well as family healthcare solutions in Surunga and Damak.
                 </p>
                 <p className={`section-text ${styles.sectionText1}`}>
-                    At <b>Pradhan Dental Nepal</b>, recognized as the <b>best dental in Birtamode,</b> we combine modern technology with compassionate care to make treatments comfortable and accessible. Whether you need a routine <b>dental checkup in Birtamode, emergency dental care,</b> or advanced solutions for restoring your smile, our clinic ensures the best outcomes at an <b>affordable price.</b>
+                    At <b>Apollo Pharmacy Nepal,</b> recognized as the <b>best pharmacy in Surunga</b> and <b>best pharmacy in Damak,</b> we combine <b>reliable pharmaceutical products</b> with compassionate service to make healthcare accessible and affordable. Whether you need <b>urgent medicines, routine health supplements, wellness products,</b> or <b>expert advice on medication management,</b> our pharmacies ensure the best quality at an affordable price.
                 </p>
                 <p className="section-text">
-                    Choose <b>Pradhan Dental</b> for the <b>best dentist in Birtamode,</b> where healthy smiles begin with expert care and a personal touch at the most trusted <b>dental clinic in Birtamode.</b>
+                    Choose <b>Apollo Pharmacy</b> for the <b>best pharmacy service in Surunga and Damak,</b> where healthy living begins with <b>trusted medicines</b> and <b>expert care</b> at the most reliable <b>pharmacy in Jhapa.</b>
                 </p>
 
             </div>

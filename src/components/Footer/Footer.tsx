@@ -57,10 +57,10 @@ export const Footer = memo(() => (
                         href="/"
                         className={`${styles.logo}`}
                     >
-                        Pradhan Dental
+                        Apollo Pharmacy
                     </Link>
                     <p className={styles.footerText}>
-                        Your trusted <strong>dental clinic in Birtamode</strong> for <strong>dental implants</strong>, <strong>braces</strong>, <strong>cosmetic dentistry</strong>, <strong>root canal</strong>, <strong>teeth whitening</strong>, <strong>orthodontics</strong>, and <strong>family dental care</strong> at an affordable price. Visit <strong>Pradhan Dental Nepal</strong> for healthy smiles.
+                        Your trusted <strong>pharmacy in Surunga</strong> and <b>Damak</b> for <strong>prescription medicines</strong>, <strong>health supplements</strong>, <strong>baby care</strong>, <strong>diabetic care</strong>, <strong>ayurvedic products</strong>, and <strong>family healthcare solutions</strong> at an affordable price. Visit <strong>Apollo Pharmacy Nepal</strong> for healthy smiles.
                     </p>
 
                     <div className={styles.schedule}>
@@ -69,7 +69,7 @@ export const Footer = memo(() => (
                         </div>
                         <span className={styles.span}>
                             Daily:<br />
-                            9:00 AM - 5:00 PM
+                            7:00 AM - 10:00 PM
                         </span>
                     </div>
 
@@ -98,7 +98,7 @@ export const Footer = memo(() => (
         <div className={styles.footerBottom}>
             <div className={styles.customContainer}>
                 <p className={styles.copyright}>
-                    &copy; 2025 All Rights Reserved by Pradhan Dental Clinic.
+                    &copy; {new Date().getFullYear()} All Rights Reserved by Apollo Pharmacy.
                 </p>
                 <SocialIcon
                     className="justify-center"

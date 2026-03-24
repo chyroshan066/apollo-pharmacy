@@ -6,9 +6,7 @@ import AnalyticsWrapper from "@/utils/AnalyticsWrapper";
 import { Header } from "@/components/Header/Header";
 import { BackToTop } from "@/components/BackToTop/BackToTop";
 import { Footer } from "@/components/Footer/Footer";
-import { dentalServicesStructuredData, dentalClinicStructuredData, dentalSpecialtiesStructuredData } from "@/constants";
-
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+import { baseURL, pharmacyBusinessStructuredData, pharmacyProductCategoriesStructuredData, pharmacyServicesStructuredData } from "@/constants";
 
 const roboto = localFont({
   src: [
@@ -75,35 +73,38 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pradhan Dental - Advanced Dental Care in Birtamode, Nepal",
-  description: "Pradhan Dental offers comprehensive dental care in Birtamode, Nepal. Expert dentists providing treatments such as dental implants, braces, root canal therapy, cosmetic dentistry, teeth whitening, and preventive oral care in a modern, comfortable clinic.",
+  title: "Apollo Pharmacy - Quality Medicines & Healthcare in Surunga & Damak, Nepal",
+  description: "Apollo Pharmacy offers comprehensive pharmaceutical services in Surunga and Damak, Nepal. Trusted pharmacists providing prescription medicines, health supplements, OTC medications, diabetic care, baby care products, ayurvedic medicines, and expert health consultation in modern, well-stocked pharmacies.",
   keywords: [
-    "Pradhan Dental",
-    "dental clinic",
-    "dentist Birtamode",
-    "dental implants Birtamode",
-    "braces Birtamode",
-    "cosmetic dentistry Birtamode",
-    "root canal Birtamode",
-    "teeth whitening Birtamode",
-    "orthodontics Birtamode",
-    "best dentist Birtamode",
-    "dental care Nepal",
-    "oral surgery Birtamode",
-    "family dentist Birtamode",
-    "tooth extraction Birtamode",
-    "dental checkup Birtamode",
-    "gum treatment Birtamode",
-    "pediatric dentist Birtamode",
-    "affordable dental care Birtamode",
-    "emergency dental Birtamode",
-    "dental hygiene Birtamode",
-    "Pradhan Dental Nepal"
+    "Apollo Pharmacy",
+    "pharmacy Surunga",
+    "pharmacy Damak",
+    "best pharmacy Surunga",
+    "best pharmacy Damak",
+    "medicines Surunga",
+    "medicines Damak",
+    "prescription drugs Surunga",
+    "health supplements Damak",
+    "pharmacy Nepal",
+    "OTC medicines Surunga",
+    "diabetic care Damak",
+    "baby care products pharmacy",
+    "ayurvedic medicines Surunga",
+    "vitamins supplements Damak",
+    "pharmacy services Jhapa",
+    "affordable medicines Surunga",
+    "quality pharmacy Damak",
+    "health products Nepal",
+    "medical supplies Surunga",
+    "Apollo Pharmacy Nepal",
+    "pharmacist consultation Damak",
+    "wellness products Surunga",
+    "24 hour pharmacy Jhapa"
   ],
-  authors: [{ name: "Pradhan Dental" }],
-  creator: "Pradhan Dental",
-  publisher: "Pradhan Dental",
-  metadataBase: new URL("https://pradhandental.com"),
+  authors: [{ name: "Apollo Pharmacy" }],
+  creator: "Apollo Pharmacy",
+  publisher: "Apollo Pharmacy",
+  metadataBase: new URL("https://apollopharmacy.com.np"),
   alternates: {
     canonical: "/",
   },
@@ -152,25 +153,25 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon_io/site.webmanifest',
   openGraph: {
-    title: "Pradhan Dental - Advanced Dental Care in Birtamode, Nepal",
-    description: "Expert dentists in Birtamode offering dental implants, braces, root canals, cosmetic dentistry, and preventive care in a modern, patient-friendly clinic.",
+    title: "Apollo Pharmacy - Quality Medicines & Healthcare in Surunga & Damak, Nepal",
+    description: "Trusted pharmacists in Surunga and Damak offering prescription medicines, health supplements, diabetic care, wellness products, and expert consultation in modern, customer-friendly pharmacies.",
     type: "website",
     locale: "en_US",
     url: `${baseURL}`,
-    siteName: "Pradhan Dental",
+    siteName: "Apollo Pharmacy",
     images: [
       {
         url: `${baseURL}/images/preview.webp`,
         width: 1200,
         height: 630,
-        alt: "Pradhan Dental Clinic Preview",
+        alt: "Apollo Pharmacy Preview",
       }
     ],
   },
   category: "health",
-  classification: "Dental Clinic",
+  classification: "Apollo Pharmacy",
   referrer: "origin-when-cross-origin",
-  applicationName: "BiratCity Dental",
+  applicationName: "Apollo Pharmacy",
   generator: "Next.js",
 };
 
@@ -193,19 +194,19 @@ export default function RootLayout({
           type="application/ld+json"
           // "dangerouslySetInnerHTML" is a way to inject raw HTML content into a React component.
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(dentalServicesStructuredData),  // "__html" property accepts raw HTML/text
+            __html: JSON.stringify(pharmacyBusinessStructuredData),  // "__html" property accepts raw HTML/text
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(dentalClinicStructuredData),
+            __html: JSON.stringify(pharmacyServicesStructuredData),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(dentalSpecialtiesStructuredData),
+            __html: JSON.stringify(pharmacyProductCategoriesStructuredData),
           }}
         />
         {/* Verification tags if needed */}

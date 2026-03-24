@@ -45,10 +45,10 @@ export const Header = memo(() => {
                         <li className={styles.contactItem}>
                             <IonIcon name="mail-outline" />
                             <a
-                                href="mailto:pradhandental.btm@gmail.com"
+                                href="mailto:apollohealthcarecenter0944@gmail.com"
                                 className={styles.contactLink}
                             >
-                                pradhandental.btm@gmail.com
+                                apollohealthcarecenter0944@gmail.com
                             </a>
                         </li>
 
@@ -97,7 +97,7 @@ export const Header = memo(() => {
                         className={styles.logo}
                     >
                         <Image
-                            width={120}
+                            width={80}  // change in widht makes changes in logo
                             height={200}
                             src="/images/logo.webp"
                             alt="logo"
@@ -124,7 +124,6 @@ export const Header = memo(() => {
                         </ul>
                     </nav>
 
-                    {/* Wrap the Button in a div with CSS module class */}
                     <div className={styles.headerButton}>
                         <Button
                             btnLink={"/#contact"}

@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "pradhandental.com"
+          "value": "apollopharmacy.com.np"
         }
       ],
-      "destination": "https://www.pradhandental.com/:path*",
+      "destination": "https://www.apollopharmacy.com.np/:path*",
       "permanent": true
     },
     {
@@ -16,7 +16,7 @@
       "has": [
         {
           "type": "host",
-          "value": "www.pradhandental.com"
+          "value": "www.apollopharmacy.com.np"
         },
         {
           "type": "header",
@@ -24,7 +24,7 @@
           "value": "http"
         }
       ],
-      "destination": "https://www.pradhandental.com/:path*",
+      "destination": "https://www.apollopharmacy.com.np/:path*",
       "permanent": true
     }
   ]

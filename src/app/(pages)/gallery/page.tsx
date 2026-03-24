@@ -1,82 +1,61 @@
 import { MEDIA_ITEMS } from '@/constants/gallery';
 import Gallery from './_components/Gallery/Gallery';
 import { Metadata } from 'next';
-
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+import { baseURL } from '@/constants';
 
 export const metadata: Metadata = {
-  title: "Pradhan Dental Gallery - Modern Dental Clinic Facilities in Birtamode",
-  description: "Explore Pradhan Dental's state-of-the-art facilities in Birtamode, Nepal. View our modern dental equipment, comfortable treatment rooms, sterilization facilities, and patient-friendly environment designed for quality dental care.",
+  title: "Apollo Pharmacy Gallery - Modern Pharmacy Facilities in Surunga & Damak",
+  description: "Explore Apollo Pharmacy's well-organized facilities in Surunga and Damak, Nepal. View our comprehensive medicine inventory, comfortable consultation areas, organized product displays, and hygienic environment designed for quality pharmaceutical care.",
   keywords: [
-    "Pradhan Dental gallery",
-    "dental clinic photos Birtamode",
-    "modern dental equipment",
-    "dental facility Birtamode",
-    "dental clinic interior",
-    "sterilization facilities",
-    "comfortable dental environment",
-    "advanced dental technology",
-    "dental treatment rooms",
-    "clinic facilities Nepal",
-    "dental equipment photos",
-    "professional dental setup",
-    "clean dental clinic",
-    "patient comfort facilities",
-    "dental office tour",
-    "clinic atmosphere",
-    "dental workspace",
-    "hygienic dental clinic",
-    "dental clinic amenities",
-    "Birtamode dental facilities"
+    "Apollo Pharmacy gallery",
+    "pharmacy photos Surunga",
+    "pharmacy photos Damak",
+    "modern pharmacy facilities",
+    "pharmacy interior Surunga",
+    "pharmacy interior Damak",
+    "organized medicine display",
+    "pharmacy consultation area",
+    "clean pharmacy environment",
+    "pharmacy facilities Nepal",
+    "medicine inventory photos",
+    "professional pharmacy setup",
+    "hygienic pharmacy",
+    "customer-friendly pharmacy",
+    "pharmacy store tour",
+    "pharmacy atmosphere",
+    "medicine storage facilities",
+    "quality assured pharmacy",
+    "pharmacy amenities Jhapa",
+    "Surunga pharmacy facilities",
+    "Damak pharmacy facilities"
   ],
-  authors: [{ name: "Pradhan Dental" }],
-  creator: "Pradhan Dental",
-  publisher: "Pradhan Dental",
-  metadataBase: new URL("https://pradhandental.com"),
   alternates: {
     canonical: "/gallery",
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large", // Important for gallery images
-      "max-snippet": -1,
-    },
-  },
   openGraph: {
-    title: "Pradhan Dental Gallery - Modern Facilities & Equipment",
-    description: "Take a virtual tour of Pradhan Dental's modern facilities in Birtamode. See our advanced dental equipment, comfortable treatment rooms, and patient-centered environment.",
+    title: "Apollo Pharmacy Gallery - Modern Facilities in Surunga & Damak",
+    description: "Take a virtual tour of Apollo Pharmacy's modern facilities in Surunga and Damak. See our well-stocked medicine inventory, organized displays, and customer-centered environment.",
     type: "website",
     locale: "en_US",
     url: `${baseURL}/gallery`,
-    siteName: "Pradhan Dental",
+    siteName: "Apollo Pharmacy",
     images: [
       {
         url: `${baseURL}/images/preview.webp`,
         width: 1200,
         height: 630,
-        alt: "Pradhan Dental Clinic Facilities and Equipment Gallery",
+        alt: "Apollo Pharmacy Facilities and Medicine Inventory Gallery",
       },
     ],
   },
   other: {
     "og:image:type": "image/webp",
     "twitter:card": "summary_large_image",
-    "twitter:title": "Pradhan Dental Gallery - Modern Facilities",
-    "twitter:description": "Explore our state-of-the-art dental facilities and equipment in Birtamode, Nepal",
+    "twitter:title": "Apollo Pharmacy Gallery - Modern Facilities",
+    "twitter:description": "Explore our well-organized pharmacy facilities and comprehensive medicine inventory in Surunga and Damak, Nepal",
     "twitter:image": `${baseURL}/images/preview.webp`,
   },
-  category: "health",
-  classification: "Dental Clinic Gallery",
-  referrer: "origin-when-cross-origin",
-  applicationName: "Pradhan Dental",
-  generator: "Next.js",
+  classification: "Pharmacy Gallery",
 };
 
 export default function GalleryPage() {

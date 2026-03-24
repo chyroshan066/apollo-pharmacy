@@ -22,7 +22,7 @@ export const Review = memo(() => {
                 fontSize: 'var(--fontSize-6)',
                 marginBlockEnd: '40px'
               }}>
-              Help others discover our exceptional dental care by sharing your experience on Google Reviews
+              Help others discover our exceptional pharmacy service by sharing your experience on Google Reviews
             </p>
           </div>
 

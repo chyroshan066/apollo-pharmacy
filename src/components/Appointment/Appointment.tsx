@@ -22,9 +22,9 @@ interface AlertState {
 const initialValues: AppointmentFormData = {
     name: "",
     phone: "",
-    address: "Birtamode, Jhapa",
+    address: "Surunga, Jhapa",
     date: "",
-    time: "09:00am",
+    time: "07:00am",
     message: "",
 };
 
@@ -135,10 +135,16 @@ export const Appointment = memo(() => {
                         noValidate
                     >
                         <h2 className="headline-1 text-center">Book Appointment</h2>
-                        <p className={`text-center ${styles.formText}`}>
-                            Booking request <a href="tel:+97723530874" className={styles.link}>023-530874 </a>
-                            or fill out the appointment form
-                        </p>
+                        <div className={`text-center ${styles.formText}`}>
+                            <p>
+                                Booking request <a href="tel:+9779848136691" className={styles.link}>9848136691 </a>
+                                or fill out the appointment form (Surunga)
+                            </p>
+                            <p>
+                                Booking request <a href="tel:+97723570944" className={styles.link}>023-570944 </a>
+                                or fill out the appointment form (Damak)
+                            </p>
+                        </div>
                         <div className={styles.inputWrapper}>
 
                             <div style={{ marginBottom: '20px' }}>
@@ -214,16 +220,16 @@ export const Appointment = memo(() => {
                                     {...register("time")}
                                     className="input-field"
                                 >
-                                    {[...Array(4)].map((_, index) => (
+                                    {[...Array(6)].map((_, index) => (
                                         <option
                                             key={index}
-                                            value={`${index < 1 ? `0${9 + index}` : 9 + index}:00am`}
+                                            value={`${index < 3 ? `0${7 + index}` : 7 + index}:00am`}
                                         >
-                                            {index < 1 ? `0${9 + index}` : 9 + index} : 00 am
+                                            {index < 3 ? `0${7 + index}` : 7 + index} : 00 am
                                         </option>
                                     ))}
 
-                                    {[...Array(5)].map((_, index) => (
+                                    {[...Array(10)].map((_, index) => (
                                         <option
                                             key={index}
                                             value={`${index < 9 ? `0${1 + index}` : 1 + index}:00pm`}
@@ -268,21 +274,25 @@ export const Appointment = memo(() => {
                         <h2 className={`headline-1 text-center ${styles.headline1}`}>Contact Us</h2>
                         <p className={`contact-label ${styles.contactLabel}`}>Booking Request</p>
                         <a
-                            href="tel:+97723530874"
+                            href="tel:+9779848136691"
                             className="body-1 contact-number hover-underline"
                         >
-                            023-530874
+                            9848136691
                         </a>
                         <div className={`separator ${styles.separator}`}></div>
                         <p className={`contact-label ${styles.contactLabel}`}>Location</p>
                         <address className={`body-4 ${styles.body4}`}>
-                            Near Aduwa Khola Bridge,  <br />
-                            Birtamode, Nepal
+                            Jaycees Chowk, Damak  <br />
+                            Jhapa, Nepal
+                        </address>
+                        <address className={`body-4 ${styles.body4}`}>
+                            Hospital Road, Surunga  <br />
+                            Jhapa, Nepal
                         </address>
                         <p className={`contact-label ${styles.contactLabel}`}>Daily</p>
                         <p className={`body-4 ${styles.body4}`}>
                             {/* Sunday to Friday <br /> */}
-                            9.00 am - 5.00pm
+                            7.00 am - 10.00pm
                         </p>
                     </div>
                 </div>

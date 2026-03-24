@@ -14,11 +14,11 @@ export const NAVLINKS: NavLink[] = [
         name: "Services",
     },
     {
-        href: "/dentist",
-        name: "Dentist",
+        href: "/#doctor",
+        name: "Doctor",
     },
-    {
-        href: "/gallery",
-        name: "Gallery",
-    },
+    // {
+    //     href: "/gallery",
+    //     name: "Gallery",
+    // },
 ];

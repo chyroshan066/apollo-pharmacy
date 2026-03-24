@@ -1,16 +1,15 @@
-# Pradhan Dental Clinic Website
+# Apollo Pharmacy Website
 
-A comprehensive, responsive dental website built with Next.js and TypeScript, featuring online appointment booking, service showcases, patient testimonials, and seamless customer engagement tools designed to enhance the dental practice experience.
+A comprehensive, responsive pharmacy website built with Next.js and TypeScript, featuring online medicine inquiries, health product showcases, customer reviews, and seamless engagement tools designed to enhance the overall pharmacy experience at Apollo Pharmacy.
 
 ## 🍽️ About
 
-Pradhan Dental is a premium dental practice website designed to provide patients with an exceptional online experience. The site features elegant design and intuitive navigation to showcase comprehensive dental services and facilitate seamless appointment booking.
+Apollo Pharmacy is a premium pharmacy website designed to provide customers with an exceptional online experience. The site features an elegant design and intuitive navigation to showcase a wide range of medicines and health products while enabling seamless customer support and service inquiries.
 
 ## ✨ Features
 
 - **Responsive Design** - Optimized for all devices (desktop, tablet, mobile)
-- **Online Appointments** - Easy appointment booking system with form validation
-- **Menu Showcase** - Beautiful presentation of dental services
+- **Menu Showcase** - Beautiful presentation of pharmacy services
 - **Contact Information** - Easy-to-find location, hours, and contact details
 - **Performance Optimized** - Fast loading times and smooth user experience
 - **SEO Friendly** - Optimized for search engines and local discovery
@@ -36,7 +35,7 @@ Pradhan Dental is a premium dental practice website designed to provide patients
 1. **Clone the repository**
    ```bash
    git clone [repository-url]
-   cd rathi-dental
+   cd apollo-pharmacy
    ```
 
 2. **Install dependencies**
@@ -68,7 +67,7 @@ npm run start
 ## 🏗️ Project Structure
 
 ```
-pradhan-dental/
+apollo-pharmacy/
 ├── .github/
 ├── public/
 │   ├── fonts/
@@ -136,7 +135,7 @@ pradhan-dental/
 - Mobile-optimized interface
 
 ### Service Display
-- Categorized dermatological and aesthetic services
+- Expertly categorized dermatological and aesthetic services for effortless browsing
 
 ## 📱 Responsive Design
 
@@ -150,7 +149,7 @@ The website is fully responsive and tested on:
 
 ### Custom Domain Setup
 
-The website is configured for the custom domain `pradhandental.com`:
+The website is configured for the custom domain `apollopharmacy.com.np`:
 
 1. DNS records are configured for the domain
 2. SSL certificates are automatically provisioned
@@ -180,7 +179,7 @@ npm run type-check
 
 - Meta tags
 - Open Graph support
-- Structured data for clinic information
+- Structured data for pharmacy information
 - Local business schema markup
 - Sitemap generation
 
@@ -188,7 +187,7 @@ npm run type-check
 
 The website is deployed on Vercel with automatic deployments:
 
-- **Production**: https://pradhandental.com
+- **Production**: https://apollopharmacy.com.np
 - **Preview**: Automatic preview deployments for pull requests
 
 ### Manual Deployment
@@ -201,8 +200,8 @@ npm run export  # if using static export
 ## 📞 Support & Maintenance
 
 ### Client Information
-- **Dental Clinic**: Pradhan Dental
-- **Domain**: pradhandental.com
+- **Pharmacy**: Apollo Pharmacy
+- **Domain**: apollopharmacy.com.np
 - **Deployment**: Vercel
 
 ### Developer Contact
@@ -210,12 +209,10 @@ For technical support or website updates, contact the developer.
 
 ## 📝 License
 
-This project is proprietary software developed specifically for Pradhan Dental Clinic.
+This project is proprietary software developed specifically for Apollo Pharmacy.
 
 ---
 
 **Built with ❤️ for Gurung BBQ**
 
 *For any questions or support regarding this website, contact **[chyroshan066](https://github.com/chyroshan066)**.*
-
-slhsgag

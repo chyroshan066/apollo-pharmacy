@@ -187,9 +187,9 @@ const VideoPlayer = memo(({ video }: { video: VideoData }) => {
                 {/* Decorative Elements */}
                 <div className={styles.videoDecoration}>
                     <div className={styles.decorationDots}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span />
+                        <span />
+                        <span />
                     </div>
                 </div>
             </div>
@@ -203,16 +203,16 @@ export const Intro = memo(({
     videos = [
         {
             id: 'video-1',
-            src: '/images/media/videos/v3.webm',
+            src: '',
             title: 'Experience Excellence In',
             subtitle: 'Our Story',
-            description: 'Watch our journey of providing world-class dental treatments with cutting-edge technology and compassionate care in the heart of Birtamode.'
+            description: 'Watch our journey of providing world-class pharmaceutical services with trusted medicines and compassionate care in the heart of Damak and Surunga.'
         },
-        {
-            id: 'video-2',
-            src: '/images/media/videos/v4.webm',
-            title: 'Advanced Dental Technology',
-        }
+        // {
+        //     id: 'video-2',
+        //     src: '',
+        //     title: 'Advanced Dental Technology',
+        // }
     ]
 }: IntroProps) => {
     return (
@@ -231,7 +231,7 @@ export const Intro = memo(({
                                 </p>
                                 <h2 className={`h2 section-title ${styles.sectionTitle}`}>
                                     {videos[0].title} <br />
-                                    Dental Care
+                                    Pharmacy Services
                                 </h2>
                                 <p className={`section-text ${styles.sectionText}`}>
                                     {videos[0].description}

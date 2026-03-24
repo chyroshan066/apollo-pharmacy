@@ -24,31 +24,25 @@ interface EntryPoint {
   urlTemplate: string;
 }
 
-interface Appointment {
-  "@type": "Appointment";
-  name: string;
-}
-
-interface ScheduleAction {
-  "@type": "ScheduleAction";
+interface ContactAction {
+  "@type": "ContactAction";
   target: EntryPoint;
-  result: Appointment;
 }
 
-interface AnatomicalStructure {
-  "@type": "AnatomicalStructure";
-  name: string;
-}
-
-interface MedicalProcedure {
-  "@type": "MedicalProcedure";
+interface Drug {
+  "@type": "Drug";
   name: string;
   description: string;
-  procedureType: string;
-  bodyLocation: AnatomicalStructure;
 }
 
-interface MedicalSpecialty {
+interface MedicalService {
+  "@type": "MedicalService";
+  name: string;
+  description: string;
+  serviceType: string;
+}
+
+interface ServiceCategory {
   "@type": "MedicalSpecialty";
   name: string;
   description: string;
@@ -58,36 +52,35 @@ interface MedicalSpecialty {
 interface ListItem {
   "@type": "ListItem";
   position: number;
-  item: MedicalSpecialty;
+  item: ServiceCategory;
 }
 
-interface DentalBusinessStructuredData {
+interface PharmacyBusinessStructuredData {
   "@context": "https://schema.org";
-  "@type": "Dentist";
+  "@type": "Pharmacy";
   name: string;
   description: string;
   url: string | undefined;
-  address: PostalAddress;
-  telephone: string;
+  address: PostalAddress[];
+  telephone: string[];
   email: string;
   openingHours: string[];
-  medicalSpecialty: string[];
   priceRange: string;
   aggregateRating: AggregateRating;
-  geo: GeoCoordinates;
+  geo: GeoCoordinates[];
   sameAs: string[];
-  potentialAction: ScheduleAction;
+  potentialAction: ContactAction;
 }
 
-interface DentalServicesStructuredData {
+interface PharmacyServicesStructuredData {
   "@context": "https://schema.org";
   "@type": "MedicalBusiness";
   name: string;
   description: string;
-  availableService: MedicalProcedure[];
+  availableService: MedicalService[];
 }
 
-interface SpecialtiesStructuredData {
+interface ProductCategoriesStructuredData {
   "@context": "https://schema.org";
   "@type": "ItemList";
   name: string;
@@ -95,30 +88,39 @@ interface SpecialtiesStructuredData {
   itemListElement: ListItem[];
 }
 
-export const dentalClinicStructuredData: DentalBusinessStructuredData = {
+export const pharmacyBusinessStructuredData: PharmacyBusinessStructuredData = {
   "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "Pradhan Dental", 
-  "description": "Professional dental care services in Birtamode. Comprehensive oral health treatments including routine checkups, advanced procedures, orthodontics, and emergency dental care. Modern equipment, experienced dentists, and patient-focused approach.", 
-  "url": "https://www.pradhandental.com",
+  "@type": "Pharmacy",
+  "name": "Apollo Pharmacy", 
+  "description": "Professional pharmaceutical services in Surunga and Damak. Comprehensive healthcare solutions including prescription medicines, OTC medications, health supplements, diabetic care, baby care products, and expert consultation. Quality medicines, experienced pharmacists, and customer-focused approach.", 
+  "url": "https://www.apollopharmacy.com.np",
   
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Aduwa Khola",
-    "addressLocality": "Birtamode",
-    "addressRegion": "Koshi",
-    "postalCode": "57204",
-    "addressCountry": "NP"
-  },
-  
-  "telephone": "+977-23530874",
-  "email": "pradhandental.btm@gmail.com",
-  
-  "openingHours": [
-    "Su-Fr 9:00-17:00",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Hospital Road",
+      "addressLocality": "Surunga",
+      "addressRegion": "Koshi",
+      "postalCode": "57200",
+      "addressCountry": "NP"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Jaycees Road",
+      "addressLocality": "Damak",
+      "addressRegion": "Koshi",
+      "postalCode": "57217",
+      "addressCountry": "NP"
+    }
   ],
   
-  "medicalSpecialty": ["Dentistry", "Oral Surgery", "Orthodontics", "Periodontics"],
+  "telephone": ["+977-9848136691", "+977-023570944"],
+  "email": "apollohealthcarecenter0944@gmail.com",
+  
+  "openingHours": [
+    "Su-Sa 7:00-22:00",
+  ],
+  
   "priceRange": "$$",
   
   "aggregateRating": {
@@ -127,284 +129,176 @@ export const dentalClinicStructuredData: DentalBusinessStructuredData = {
     "ratingCount": "2"
   },
   
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "26.64260", 
-    "longitude": "87.99009"
-  },
+  "geo": [
+    {
+      "@type": "GeoCoordinates",
+      "latitude": "26.66068", 
+      "longitude": "87.69849"
+    },
+    {
+      "@type": "GeoCoordinates",
+      "latitude": "26.64110", 
+      "longitude": "87.89030"
+    }
+  ],
   
   "sameAs": [
-    "https://www.facebook.com/pradhan.dental",
-    "https://www.tiktok.com/search?q=Pradhan%20Dental&t=1758690321548"
+    // "https://www.facebook.com/apollopharmacy.nepal",
   ],
   
   "potentialAction": {
-    "@type": "ScheduleAction",
+    "@type": "ContactAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://www.pradhandental.com/#contact"
-    },
-    "result": {
-      "@type": "Appointment",
-      "name": "Dental Appointment"
+      "urlTemplate": "https://www.apollopharmacy.com.np/#contact"
     }
   }
 };
 
-export const dentalServicesStructuredData: DentalServicesStructuredData = {
+export const pharmacyServicesStructuredData: PharmacyServicesStructuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Dental Services",
-  "description": "Comprehensive dental care services including preventive, restorative, surgical, and cosmetic treatments",
+  "name": "Pharmacy Services",
+  "description": "Comprehensive pharmaceutical services including prescription dispensing, health consultation, wellness products, and specialized care",
   
   "availableService": [
     {
-      "@type": "MedicalProcedure",
-      "name": "Dental Checkup",
-      "description": "Routine examination and cleaning to maintain healthy teeth and gums. Comprehensive oral health assessment including cavity detection and preventive care.",
-      "procedureType": "Preventive Care",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Oral Cavity"
-      }
+      "@type": "MedicalService",
+      "name": "Prescription Dispensing",
+      "description": "Professional dispensing of prescription medications with expert guidance and dosage instructions. Quality-assured medicines from trusted manufacturers.",
+      "serviceType": "Pharmaceutical Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Dental X-Ray",
-      "description": "Advanced digital imaging to detect hidden dental problems and plan precise treatments. Includes panoramic and periapical X-rays.",
-      "procedureType": "Diagnostic Imaging",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth and Jaw"
-      }
+      "@type": "MedicalService",
+      "name": "Medication Counseling",
+      "description": "Expert pharmacist consultation for proper medication usage, side effects, and drug interactions. Personalized guidance for your health needs.",
+      "serviceType": "Consultation"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Teeth Whitening",
-      "description": "Professional brightening treatment to remove stains and enhance your smile. Safe, effective in-office whitening procedures.",
-      "procedureType": "Cosmetic Dentistry",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth"
-      }
+      "@type": "MedicalService",
+      "name": "OTC Medications",
+      "description": "Wide range of over-the-counter medicines for common ailments including pain relief, cold and flu, digestive issues, and allergies.",
+      "serviceType": "Product Supply"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Gingivitis & Periodontitis Treatment",
-      "description": "Specialized treatment for gum disease to restore healthy gums and prevent tooth loss. Deep cleaning and periodontal therapy.",
-      "procedureType": "Periodontal Care",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Gums"
-      }
+      "@type": "MedicalService",
+      "name": "Health Supplements & Vitamins",
+      "description": "Comprehensive selection of multivitamins, minerals, protein supplements, and nutritional products for overall wellness.",
+      "serviceType": "Wellness Products"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Composite Filling",
-      "description": "Tooth-colored fillings to repair cavities and restore natural appearance. Durable composite resin restorations.",
-      "procedureType": "Restorative Dentistry",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth"
-      }
+      "@type": "MedicalService",
+      "name": "Diabetic Care Products",
+      "description": "Complete diabetic care solutions including glucose meters, test strips, insulin supplies, and diabetic-friendly supplements.",
+      "serviceType": "Specialized Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "GIC Restoration",
-      "description": "Glass Ionomer Cement fillings for cavity repair with fluoride release properties. Ideal for root surface cavities.",
-      "procedureType": "Restorative Dentistry",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth"
-      }
+      "@type": "MedicalService",
+      "name": "Baby Care Products",
+      "description": "Full range of baby care essentials including diapers, baby food, milk formula, lotions, and infant health products.",
+      "serviceType": "Product Supply"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Root Canal Treatment (RCT)",
-      "description": "Root canal treatment to save infected teeth and eliminate pain. Advanced endodontic therapy to preserve natural teeth.",
-      "procedureType": "Endodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Tooth Root"
-      }
+      "@type": "MedicalService",
+      "name": "Ayurvedic Medicines",
+      "description": "Traditional ayurvedic remedies and herbal medicines for natural healing and wellness. Quality ayurvedic products from trusted brands.",
+      "serviceType": "Alternative Medicine"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Oral Surgery",
-      "description": "Surgical procedures for complex dental treatments including impacted wisdom teeth and surgical extractions.",
-      "procedureType": "Oral Surgery",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Oral Cavity"
-      }
+      "@type": "MedicalService",
+      "name": "Personal Care Products",
+      "description": "Wide selection of personal hygiene and care products including sanitizers, face masks, bandages, and first aid supplies.",
+      "serviceType": "Product Supply"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Complete Denture (CD)",
-      "description": "Custom full dentures to replace all missing teeth and restore complete oral function and aesthetics.",
-      "procedureType": "Prosthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Upper and Lower Jaw"
-      }
+      "@type": "MedicalService",
+      "name": "Blood Pressure Monitoring",
+      "description": "Free blood pressure checking service with accurate digital equipment. Regular monitoring for hypertension management.",
+      "serviceType": "Health Monitoring"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Removable Partial Denture (RPD)",
-      "description": "Custom partial dentures to replace multiple missing teeth with removable appliance.",
-      "procedureType": "Prosthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Jaw"
-      }
+      "@type": "MedicalService",
+      "name": "Blood Sugar Testing",
+      "description": "Quick and accurate blood glucose testing service for diabetes management and monitoring.",
+      "serviceType": "Health Monitoring"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Fixed Partial Denture (FPD) - Bridge",
-      "description": "Fixed bridges to replace missing teeth permanently, anchored to adjacent healthy teeth.",
-      "procedureType": "Prosthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth"
-      }
+      "@type": "MedicalService",
+      "name": "Prescription Verification",
+      "description": "Professional verification of prescriptions to ensure safety and accuracy before dispensing medications.",
+      "serviceType": "Pharmaceutical Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Simple Tooth Extraction",
-      "description": "Safe tooth removal procedures for damaged or problematic teeth using gentle extraction techniques.",
-      "procedureType": "Oral Surgery",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth"
-      }
+      "@type": "MedicalService",
+      "name": "Medicine Home Delivery",
+      "description": "Convenient home delivery service for medicines and health products. Fast and reliable delivery to your doorstep.",
+      "serviceType": "Delivery Service"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Surgical Extraction",
-      "description": "Complex tooth removal for impacted or difficult-to-extract teeth requiring surgical approach.",
-      "procedureType": "Oral Surgery",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth and Jawbone"
-      }
+      "@type": "MedicalService",
+      "name": "Generic Medicine Alternatives",
+      "description": "Cost-effective generic medicine alternatives with same efficacy. Expert guidance on quality generic options.",
+      "serviceType": "Pharmaceutical Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Orthodontic Treatment - Metal Braces",
-      "description": "Traditional metal braces to straighten teeth and correct bite alignment. Comprehensive orthodontic care.",
-      "procedureType": "Orthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth and Jaw"
-      }
+      "@type": "MedicalService",
+      "name": "First Aid Supplies",
+      "description": "Complete range of first aid products including bandages, antiseptics, wound care, and emergency medical supplies.",
+      "serviceType": "Product Supply"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Orthodontic Treatment - Ceramic Braces",
-      "description": "Tooth-colored ceramic braces for discreet orthodontic treatment with aesthetic appeal.",
-      "procedureType": "Orthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth and Jaw"
-      }
+      "@type": "MedicalService",
+      "name": "Surgical & Medical Equipment",
+      "description": "Medical devices and surgical supplies including thermometers, nebulizers, blood pressure monitors, and mobility aids.",
+      "serviceType": "Medical Equipment"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Dental Crown - Ceramic",
-      "description": "High-quality ceramic caps to protect and restore damaged or weakened teeth with natural appearance.",
-      "procedureType": "Prosthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Individual Tooth"
-      }
+      "@type": "MedicalService",
+      "name": "Women's Health Products",
+      "description": "Specialized products for women's health including prenatal vitamins, feminine hygiene, and maternal care products.",
+      "serviceType": "Specialized Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Dental Crown - Metal",
-      "description": "Durable metal crowns for posterior teeth requiring maximum strength and longevity.",
-      "procedureType": "Prosthodontics",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Individual Tooth"
-      }
+      "@type": "MedicalService",
+      "name": "Elderly Care Products",
+      "description": "Products designed for elderly care including adult diapers, mobility aids, supplements, and chronic disease management supplies.",
+      "serviceType": "Specialized Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Halitosis Treatment",
-      "description": "Specialized care to eliminate bad breath and restore fresh confidence through comprehensive oral health improvement.",
-      "procedureType": "General Dentistry",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Oral Cavity"
-      }
+      "@type": "MedicalService",
+      "name": "Vaccination Services",
+      "description": "Professional vaccination services including flu shots, tetanus, and other preventive immunizations.",
+      "serviceType": "Preventive Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Oral Boil Treatment",
-      "description": "Professional care to treat oral boils and prevent painful infections through drainage and antibiotic therapy.",
-      "procedureType": "Oral Medicine",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Oral Soft Tissues"
-      }
+      "@type": "MedicalService",
+      "name": "Health Screening Packages",
+      "description": "Comprehensive health screening services including basic health checkups and diagnostic test coordination.",
+      "serviceType": "Preventive Care"
     },
     {
-      "@type": "MedicalProcedure",
-      "name": "Scaling (Deep Cleaning)",
-      "description": "Professional plaque and tartar removal to maintain healthy gums and teeth. Ultrasonic and manual scaling.",
-      "procedureType": "Preventive Care",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth and Gums"
-      }
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Tooth Polishing",
-      "description": "Professional tooth polishing to remove stains and restore natural shine. Final step in professional cleaning.",
-      "procedureType": "Preventive Care",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Teeth"
-      }
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Dental Trauma Management",
-      "description": "Emergency care for dental injuries to save and restore damaged teeth. Immediate and follow-up treatment.",
-      "procedureType": "Emergency Dentistry",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Oral Cavity"
-      }
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "Full Mouth Rehabilitation",
-      "description": "Comprehensive restoration to rebuild and transform your entire smile. Complete oral reconstruction with multiple specialties.",
-      "procedureType": "Comprehensive Treatment",
-      "bodyLocation": {
-        "@type": "AnatomicalStructure",
-        "name": "Entire Oral Cavity"
-      }
+      "@type": "MedicalService",
+      "name": "Nutrition Consultation",
+      "description": "Expert nutritional guidance and diet planning for weight management, diabetes, and overall wellness.",
+      "serviceType": "Consultation"
     }
   ]
 };
 
-export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
+export const pharmacyProductCategoriesStructuredData: ProductCategoriesStructuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Dental Specialties and Services",
-  "description": "Comprehensive dental care organized by specialty areas",
+  "name": "Pharmacy Product Categories and Services",
+  "description": "Comprehensive pharmaceutical products and services organized by category",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Preventive Dentistry",
-        "description": "Routine care to maintain oral health and prevent dental problems",
-        "includedServices": ["Dental Checkup", "Scaling", "Polishing", "X-Ray"]
+        "name": "Prescription Medicines",
+        "description": "Quality prescription medications for various health conditions",
+        "includedServices": ["Antibiotics", "Chronic Disease Medications", "Pain Management", "Cardiovascular Drugs"]
       }
     },
     {
@@ -412,9 +306,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 2,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Restorative Dentistry",
-        "description": "Treatments to repair and restore damaged teeth",
-        "includedServices": ["Composite Filling", "GIC Restoration", "Dental Crown"]
+        "name": "Over-The-Counter (OTC)",
+        "description": "Common medications available without prescription",
+        "includedServices": ["Pain Relief", "Cold & Flu", "Digestive Health", "Allergy Medications"]
       }
     },
     {
@@ -422,9 +316,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 3, 
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Endodontics",
-        "description": "Root canal treatments to save infected teeth",
-        "includedServices": ["Root Canal Treatment"]
+        "name": "Health Supplements",
+        "description": "Vitamins, minerals, and nutritional supplements",
+        "includedServices": ["Multivitamins", "Protein Supplements", "Omega-3", "Calcium & Vitamin D"]
       }
     },
     {
@@ -432,9 +326,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 4,
       "item": {
         "@type": "MedicalSpecialty", 
-        "name": "Oral Surgery",
-        "description": "Surgical procedures for complex dental cases",
-        "includedServices": ["Tooth Extraction", "Surgical Extraction", "Oral Surgery", "Trauma Management"]
+        "name": "Diabetic Care",
+        "description": "Complete diabetic management products and supplies",
+        "includedServices": ["Glucose Meters", "Test Strips", "Insulin Supplies", "Diabetic Supplements"]
       }
     },
     {
@@ -442,9 +336,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 5,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Prosthodontics", 
-        "description": "Replacement of missing teeth with artificial substitutes",
-        "includedServices": ["Complete Denture", "Partial Denture", "Fixed Bridge", "Full Mouth Rehabilitation"]
+        "name": "Baby & Mother Care", 
+        "description": "Products for infants, babies, and maternal health",
+        "includedServices": ["Baby Food", "Diapers", "Infant Formula", "Prenatal Vitamins"]
       }
     },
     {
@@ -452,9 +346,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 6,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Orthodontics",
-        "description": "Correction of teeth and jaw alignment",
-        "includedServices": ["Metal Braces", "Ceramic Braces", "Orthodontic Treatment"]
+        "name": "Ayurvedic & Herbal",
+        "description": "Traditional and natural healing products",
+        "includedServices": ["Ayurvedic Medicines", "Herbal Supplements", "Natural Remedies", "Traditional Formulations"]
       }
     },
     {
@@ -462,9 +356,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 7,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Cosmetic Dentistry",
-        "description": "Aesthetic improvements to enhance your smile", 
-        "includedServices": ["Teeth Whitening", "Ceramic Crowns", "Polishing"]
+        "name": "Personal Care & Hygiene",
+        "description": "Daily care and hygiene essentials", 
+        "includedServices": ["Sanitizers", "Face Masks", "Hygiene Products", "Skincare"]
       }
     },
     {
@@ -472,9 +366,9 @@ export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
       "position": 8,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Periodontics",
-        "description": "Treatment of gum diseases and supporting structures",
-        "includedServices": ["Gingivitis Treatment", "Periodontitis Treatment", "Scaling"]
+        "name": "Medical Equipment",
+        "description": "Home healthcare and monitoring devices",
+        "includedServices": ["BP Monitors", "Thermometers", "Nebulizers", "Mobility Aids"]
       }
     }
   ]

@@ -57,6 +57,7 @@ DentistCard.displayName = "DoctorCard";
 export const Dentist = memo(() => (
     <section
         className={`section ${styles.doctor}`}
+        id="doctor"
         aria-label="doctor"
     >
         <div className="custom-container">
@@ -64,9 +65,10 @@ export const Dentist = memo(() => (
             <TitleHeader
                 title={"Our Doctors"}
                 subTitle={"Best Expert Dentist"}
+                className="mb-20"
             />
 
-            <ul className={styles.hasScrollbar}>
+            <ul className={styles.hasScrollbar} style={{ paddingBlockEnd: "40px"}}>
 
                 {DENTISTS.map((dentist, index) => (
                     <DentistCard
