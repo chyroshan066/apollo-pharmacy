@@ -8,7 +8,7 @@ import { SocialIcon } from "../utility/SocialIcon/SocialIcon";
 import { HeroSlider } from "../HeroSlider";
 
 const HEROSLIDES: string[] = [
-    // "/images/hero-banner.webp",
+    "/images/dentists/dentist-4.webp",
     // "/images/media/images/g1.webp",
     // "/images/media/images/g2.webp",
     // "/images/media/images/g3.webp",

@@ -11,17 +11,16 @@ const DentistCard = memo(({
 }: DentistType) => (
     <li className={styles.scrollbarItem}>
         <div className={styles.doctorCard}>
-            <div
-                className={`img-holder ${styles.cardBanner}`}
-                style={{ "--width": "460", "--height": "500" } as React.CSSProperties}
+             <div className={`relative w-full overflow-hidden rounded-[var(--radius-4)] mb-[25px]`}
+                style={{ height: "280px" }}
             >
                 <Image
                     src={imgSrc}
-                    width={460}
-                    height={500}
+                    fill
                     loading="lazy"
                     alt={name}
-                    className="img-cover"
+                    className="object-contain object-top"
+                    sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, (max-width: 1200px) 33vw, 25vw"
                 />
             </div>
             <h3 className="h3">

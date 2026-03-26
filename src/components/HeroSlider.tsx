@@ -61,7 +61,7 @@ export const HeroSlider = memo(({
                                 src={slide}
                                 fill
                                 alt={`Dental clinic slide ${index + 1}`}
-                                className="object-cover"
+                                className="object-"
                                 priority={index === 0}
                                 sizes="(max-width: 768px) 100vw, 400px"
                             />

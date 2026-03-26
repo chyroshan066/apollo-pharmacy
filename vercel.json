@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "apollopharmacy.com.np"
+          "value": "apollopharmacy.com"
         }
       ],
-      "destination": "https://www.apollopharmacy.com.np/:path*",
+      "destination": "https://www.apollopharmacy.com/:path*",
       "permanent": true
     },
     {
@@ -16,7 +16,7 @@
       "has": [
         {
           "type": "host",
-          "value": "www.apollopharmacy.com.np"
+          "value": "www.apollopharmacy.com"
         },
         {
           "type": "header",
@@ -24,7 +24,7 @@
           "value": "http"
         }
       ],
-      "destination": "https://www.apollopharmacy.com.np/:path*",
+      "destination": "https://www.apollopharmacy.com/:path*",
       "permanent": true
     }
   ]

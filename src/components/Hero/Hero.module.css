@@ -20,7 +20,7 @@
 }
 .heroBanner {
   position: relative;
-  height: 500px;
+  height: 600px;
   width: 100%;
   margin-block-start: 30px;
 }
@@ -53,7 +53,7 @@
   }
   .heroBanner { 
     margin-inline-end: -60px; 
-    height: 562px;
+    height: 650px;
     margin-block-start: 0;
   }
 }
