@@ -107,7 +107,7 @@ export const SERVICES: Services[] = [
     },
     {
         id: 17,
-        imgSrc: "/images/service-icons/service-icon-16.webp",
+        imgSrc: "/images/service-icons/service-icon-17.webp",
         name: "Psychiatry",
         text: "Compassionate mental health care for diagnosing and treating psychological and emotional disorders.",
         href: "/#psychiatry",
