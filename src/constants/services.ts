@@ -82,14 +82,6 @@ export const SERVICES: Services[] = [
         idStr: "24hr-emergency",
     },
     {
-        id: 11,
-        imgSrc: "/images/service-icons/service-icon-11.webp",
-        name: "ICU/NICU",
-        text: "Intensive critical care and monitoring for severely ill adults and newborns.",
-        href: "/#icu-or-nicu",
-        idStr: "icu-or-nicu",
-    },
-    {
         id: 12,
         imgSrc: "/images/service-icons/service-icon-12.webp",
         name: "Minor Major OT",
@@ -106,28 +98,12 @@ export const SERVICES: Services[] = [
         idStr: "radiology",
     },
     {
-        id: 14,
-        imgSrc: "/images/service-icons/service-icon-14.webp",
-        name: "Endoscopy & Colonoscopy",
-        text: "Minimally invasive internal examinations to diagnose digestive tract conditions and disorders.",
-        href: "/#endoscopy-and-colonoscopy",
-        idStr: "endoscopy-and-colonoscopy",
-    },
-    {
         id: 15,
         imgSrc: "/images/service-icons/service-icon-15.webp",
         name: "General Surgery",
         text: "Surgical treatment for a broad range of conditions affecting the abdomen and beyond",
         href: "/#general-surgery",
         idStr: "general-surgery",
-    },
-    {
-        id: 16,
-        imgSrc: "/images/service-icons/service-icon-16.webp",
-        name: "Neuro Surgery",
-        text: "Specialized surgical care for brain, spine, and nervous system conditions and disorders.",
-        href: "/#neuro-surgery",
-        idStr: "neuro-surgery",
     },
     {
         id: 17,

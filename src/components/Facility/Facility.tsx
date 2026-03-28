@@ -27,11 +27,6 @@ const FACILITIES: Facility[] = [
         description: "Advanced digital X-ray, ultrasound, and imaging equipment for accurate and timely diagnostics."
     },
     {
-        icon: "bed-outline",
-        title: "ICU / NICU",
-        description: "Fully equipped intensive care units with round-the-clock monitoring for critically ill adults and newborns."
-    },
-    {
         icon: "flash-outline",
         title: "24hr Emergency",
         description: "Always-open emergency department staffed with experienced doctors and life-saving equipment."
@@ -56,10 +51,6 @@ const STATS: Stats[] = [
     {
         title: "24/7 Emergency",
         description: "Always Open & Staffed",
-    },
-    {
-        title: "ICU / NICU",
-        description: "Critical Care Ready",
     },
     {
         title: "Modern OTs",
